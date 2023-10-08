@@ -80,24 +80,24 @@ WSGI_APPLICATION = 'BackendAssignment.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # DATABASES = {
-#     "default": {
-#         "ENGINE": config('DB_ENGINE',default=None),
-#         "NAME": config('DB_NAME',default=None),
-#         "USER": config('DB_USER',default=None),
-#         "PASSWORD": config('DB_PASSWORD',default=None),
-#         "HOST": config('DB_HOST',default=None),
-#         "PORT": config('DB_PORT',default=None)
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+
+DATABASES = {
+    "default": {
+        "ENGINE": config('DB_ENGINE',default=None),
+        "NAME": config('DB_NAME',default=None),
+        "USER": config('DB_USER',default=None),
+        "PASSWORD": config('DB_PASSWORD',default=None),
+        "HOST": config('DB_HOST',default=None),
+        "PORT": config('DB_PORT',default=None)
+    }
+}
 
 
 # Password validation
